@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {Experiment} from '../../common/experiment.model';
 
 @Component({
-  selector: 'experiment',
+  selector: 'experiment-detail',
   template: require('./experiment.detail.component.html'),
   styles: [`
     .experiment {
