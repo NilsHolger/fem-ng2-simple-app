@@ -7,16 +7,16 @@ import {StateService} from '../common/state.service';
 })
 export class AboutComponent implements OnInit{
   title: string = 'About Page';
-  body:  string = 'This is the about page body';
-  message: string;
+  body:  string = 'This is the about body';
+  message: string = '';
 
-  constructor(public _stateService: StateService) { }
+  constructor(public stateService: StateService) { }
 
   ngOnInit() {
-    this.message = this._stateService.getMessage();
+    this.message = this.stateService.getMessage();
   }
 
-  updateMessage(m: string): void {
-    this._stateService.setMessage(m);
+  updateMessage(msx: string): void {
+    this.stateService.setMessage(msx);
   }
 }
