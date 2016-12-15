@@ -12,20 +12,20 @@ import {ExperimentDetailComponent} from './experiment-details/experiment.detail.
 })
 export class ExperimentsComponent implements OnInit {
   title: string = 'Experiments Page';
-  body: string = 'This is the about experiments body';
-  message: string;
+  body: string = 'This is the experiments body';
+  message: string = '';
   experiments: Experiment[];
 
   constructor(
-    private _stateService: StateService,
-    private _experimentsService: ExperimentsService) {}
+    private stateService: StateService,
+    private experimentsService: ExperimentsService) {}
 
   ngOnInit() {
-    this.experiments = this._experimentsService.getExperiments();
-    this.message = this._stateService.getMessage();
+    this.experiments = this.experimentsService.getExperiments();
+    this.message = this.stateService.getMessage();
   }
 
-  updateMessage(m: string): void {
-    this._stateService.setMessage(m);
+  updateMessage(msx: string): void {
+    this.stateService.setMessage(msx);
   }
 }
