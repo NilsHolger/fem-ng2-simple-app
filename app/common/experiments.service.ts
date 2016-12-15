@@ -12,5 +12,5 @@ export class ExperimentsService {
 
   getExperiments(): Experiment[] {
     return this.experiments;
-  };
+  }
 }
