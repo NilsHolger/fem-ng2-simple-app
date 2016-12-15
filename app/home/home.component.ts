@@ -7,16 +7,16 @@ import {StateService} from '../common/state.service';
 })
 export class HomeComponent implements OnInit {
   title: string = 'Home Page';
-  body:  string = 'This is the about home body';
-  message: string;
+  body:  string = 'This is the home body';
+  message: string = '';
 
-  constructor(private _stateService: StateService) { }
+  constructor(private stateService: StateService) { }
 
   ngOnInit() {
-    this.message = this._stateService.getMessage();
+    this.message = this.stateService.getMessage();
   }
 
-  updateMessage(m: string): void {
-    this._stateService.setMessage(m);
+  updateMessage(msx: string): void {
+    this.stateService.setMessage(msx);
   }
 }
