@@ -19,5 +19,5 @@ export class ExperimentDetailComponent {
 
   doExperiment(): void {
     this.experiment.completed += 1;
-  };
+  }
 }
