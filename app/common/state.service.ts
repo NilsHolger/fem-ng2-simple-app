@@ -2,13 +2,13 @@ import {Injectable} from '@angular/core';
 
 @Injectable()
 export class StateService {
-	private _message = 'Hello Message';
+	private message = 'Hello Carmen, you are my hero, you are the best hero, will you be my hero?';
 
   getMessage(): string {
-    return this._message;
-  };
+    return this.message;
+  }
 
   setMessage(newMessage: string): void {
-    this._message = newMessage;
-  };
+    this.message = newMessage;
+  }
 }
